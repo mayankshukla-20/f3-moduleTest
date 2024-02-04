@@ -82,13 +82,17 @@ async function getCurrentTime(timezone) {
 
   let date_chicago = new Date(chicago_datetime_str);
 
+  let hours = date_chicago.getHours();
+  let minutes = date_chicago.getMinutes();
+  let seconds = date_chicago.getSeconds();
+  const formattedTime = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
   let year = date_chicago.getFullYear();
 
   let month = ("0" + (date_chicago.getMonth() + 1)).slice(-2);
 
   let date = ("0" + date_chicago.getDate()).slice(-2);
 
-  let date_time = year + "-" + month + "-" + date;
+  let date_time = year + "-" + month + "-" + date + " / " + formattedTime;
 
   return date_time;
 }
