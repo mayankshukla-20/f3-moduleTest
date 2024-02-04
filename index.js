@@ -137,7 +137,7 @@ function setAllPostOffice(arr) {
   arr[0].PostOffice.map((e) => {
     const card = document.createElement("div");
     card.classList = "card";
-    card.innerHTML = `<h4>Name <b>${e.Name}</b></h4><h4>Branch Type <b>${e.BranchType}</b></h4><h4>Delivery Status <b>${e.DeliveryStatus}</b></h4><h4>District <b>${e.District}</b></h4><h4>Division <b>${e.Division}</b></h4>`;
+    card.innerHTML = `<h4>Name - <b>${e.Name}</b></h4><h4>Branch Type - <b>${e.BranchType}</b></h4><h4>Delivery Status - <b>${e.DeliveryStatus}</b></h4><h4>District - <b>${e.District}</b></h4><h4>Division - <b>${e.Division}</b></h4>`;
     cont.append(card);
   });
 }
@@ -162,7 +162,7 @@ async function searchCard(str) {
   filteredData.forEach((e) => {
     const card = document.createElement("div");
     card.classList = "card";
-    card.innerHTML = `<h4>Name <b>${e.Name}</b></h4><h4>Branch Type <b>${e.BranchType}</b></h4><h4>Delivery Status <b>${e.DeliveryStatus}</b></h4><h4>District <b>${e.District}</b></h4><h4>Division <b>${e.Division}</b></h4>`;
+    card.innerHTML = `<h4>Name - <b>${e.Name}</b></h4><h4>Branch Type - <b>${e.BranchType}</b></h4><h4>Delivery Status - <b>${e.DeliveryStatus}</b></h4><h4>District - <b>${e.District}</b></h4><h4>Division - <b>${e.Division}</b></h4>`;
     cardContainer.append(card);
   });
 }
